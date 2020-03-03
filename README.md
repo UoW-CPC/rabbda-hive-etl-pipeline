@@ -10,9 +10,10 @@ from different sources, and allows to answer complex research questions and gain
 This is a step-by-step guide that includes all application phases:
  1. Data acquisition: Requesting the data from a Rest API.
  2. Data preparation: Pre-processing the data with Python.
- 3. ETL pipeline: Executing Hive queries.
- 4. Output data: Post-processing the data with Python.
- 5. Further analysis: 
+ 3. Data ingestion: upload the data to HDFS.
+ 4. ETL pipeline: Executing Hive queries.
+ 5. Output data: Downloading the data from HDFS and Post-processing the data with Python.
+ 6. Further analysis: 
     * Spark in memory data processing.
     * Complex research questions with Hive.
     * Data presentation with Tableau.
@@ -63,9 +64,69 @@ Move the bash folder to download the earthquakes by executing the command:
  ```
  cd bash
  ```
+ In this folder you can see the bash script that requests the data from the Rest API. To see its content run the following:
  
- Then 
+ ```
+ cat downloadEarthquakesData.sh
+ ```
+  
+ The script is develop to download earthquakes data for a single year, and you can also define minimum magnitude.
+ In this demo we will download data for the year 2019 and minimum magnitude of 6. 
+ The script is already configured, so we only need to run the following command:
  
+ ```
+ bash downloadEarthquakesData.sh
+ ```
+ To see the first rows of the data run the following command:
+  ```
+ head ../data/earthquakes.csv 
+ ```
+ Move back to the project folder:
+ ```
+ cd ..
+ ```
+ #### 2. Data preparation: Pre-processing the data with Python.
+ 
+ As you can see the data contain multiple header rows, this is because every request returned also the headers.
+ Therefore, it is required to clear those rows. We do so by executing a Python script.
+ 
+ Move to the python folder:
+ ```
+ cd python
+ ```
+ and execute the following command:
+ ```
+ python ClearTitles.py
+ ```
+ 
+ No if you check the data folder, there are two new files:
+ * _titles.csv_, file that contains the headers of the requests.
+ * _earthquakes-no-titles.csv_, file that contains earthquakes data without the headers.
+ 
+ Last step in the preparation phase is to split the earthquake datetime  column to more columns, like, year, date, and time.
+ Again, we use a Python script.  
+ 
+```
+ python SplitDateTime.py
+ ```
+ 
+  No if you check the data folder, there is two new file:
+  * _earthquakes-final.csv_, file that contains earthquakes data that will be using in the ETL pipeline
+ 
+ Move again to the project folder:
+ ```
+ cd ..
+ ```
+ #### 3. Data ingestion: upload the data to HDFS.
+ 
+ In this phase we simple have to upload the three data sets, earthquakes, cities, seismographic stations to HDFS. 
+ 
+ ```
+#Command: hdfs dfs -put /"your_local_dir_path/file" /"your_hdfs_dir_path" 
+hdfs dfs -put ../data/earthquakes-final.csv /user/mariadev/earthquakes
+hdfs dfs -put ../data/cities.csv /user/mariadev/earthquakes
+hdfs dfs -put ../data/seismographic-stations.csv /user/mariadev/earthquakes
+ ```
  
  #### Run the Python application
  
