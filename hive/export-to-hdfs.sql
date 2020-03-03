@@ -1,0 +1,1 @@
+export table earthquakes_full_dataset to '/user/dkagialis/demo/output' ;

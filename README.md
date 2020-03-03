@@ -156,66 +156,28 @@ hdfs dfs -put ../data/seismographic-stations.csv /demo # put here your path
  beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 5.sql
  # create table earthquakes_closest_city_station inner join
  beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 6.sql
- beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 7.sql
+ # export table earthquakes_closest_city_station to HDFS
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f export-to-hdfs.sql
  ```
  
  #### 5. Output data: Downloading the data from HDFS and Post-processing the data with Python.
  
- 
- 
- #### Run the Python application
- 
- Having install the requirements you can now __run the python application__. 
- 
- Move to the earthquakes folder:
+ Now we need to create the Seismograph
  ```
- cd earthquakes
- ```
- and execute the earthquakes script:
- ```
- python earthquakes.py
- ```
- By default the script makes a requests every 10 minutes. As an alternative you can pass a parameter to change this value. Example:
-  ```
- python earthquakes.py 2
- ```
- Now we have a request every 2 minutes.
- 
- To see the results open a new terminal and move to the repository directory. There, you can see a new directory, _data_. If you move into this folder, there is a file called _earthquakes.csv_.
- 
- To see its content run the following command:
-   ```
- cat earthquakes.csv
- ```
- Alternatively, you can monitor file changes with the command:
- ```
- tail -F earthquakes.csv
+ cd /data
+ HDFS
+ hdfs dfs -get /user/hadoop/file localfile
  ```
  
- At this point, we have temporary stored the data in the local machine.
- 
- #### Run the Flume Agent
-  
- The next step is to upload those data to HDFS. To do so, we use the [Flume service](https://flume.apache.org/).
- Open a new terminal and move once again to the rabbda-earthquakes-realtime directory.
- 
- There we have to edit the _flume-earthquakes-realtime.conf_ file.
- Specifically, you need to edit the  _eq.sources.r1.command_ and _eq.sinks.k1.hdfs.path_ to match your local environment.
- 
- 
- Example: 
  ```
- eq.sources.r1.command = tail -F /home/user/rabbda-earthquakes-realtime/data/earthquakes.csv
- eq.sinks.k1.hdfs.path = hdfs://NameNode.Domain.com:8020/user/UserName/flume/realtime
+ python BuildSeismograph.py
  ```
- Now is time to __start the Flume agent__ and upload the data to HDFS. Execute the command:
- ```
- flume-ng agent --name eq --conf-file flume-earthquakes-realtime.conf
- ```
- Having done this, Flume agent starts monitoring the _earthquakes.csv_ file for changes and uploads the data to HDFS.
+ ####  6. Further analysis: 
+ ##### Spark in memory data processing.
  
- #### Verify the data in HDFS
- Finally, __go to Ambari Files View__ in the path specified previously and see the data sinking to HDFS in real-time.
+ 
+ ##### Complex research questions with Hive.
+ ##### Data presentation with Tableau.
  
  ## Architecture
 <img width="732" alt="architecture" src="https://user-images.githubusercontent.com/32298274/75445139-bebad500-595c-11ea-830f-9850fa0e7dd0.png">
