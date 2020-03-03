@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "Test Bash"
-touch total.csv
+echo "Starting the earthquakes data downloading process"
+touch ../data/earthquakes.csv
 for value in {1..12}
 do
   	let 'value1 = value+1'
-	year=2017
+	year=2019
 
 	if [ "$value" = "12"  ]; then                                                                                                                                                                                                                                                                                                                           
           value1="$value"                                                                                                                                                                  
@@ -72,32 +72,17 @@ do
 	echo "dayEnd -> $dayend"
 	echo "nextMonth -> $value1"
      
-#wget -O crawlEarthquake$value$daystart.csv https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=$year-$value-$daystart&endtime=$year-$value1-$dayend&minmagnitude=5
-	echo "https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=$year-$value-$daystart&endtime=$year-$value1-$dayend&minmagnitude=6"  
+	echo "https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=$year-$value-$daystart&endtime=$year-$value1-$dayend&minmagnitude=6"
 	
 	a="earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=$year-$value-$daystart&endtime=$year-$value1-$dayend&minmagnitude=6" 
 	wget -O $value$daystart $a
-	sleep 5s
-	#rm crawlEarthquake$value$daystart.csv
-	
-	cat $value$daystart >> total.csv
-	echo "FINISHED DOWNLOAD PARTIAL the data is saved in total.csv"
+	sleep 2s
+
+	cat $value$daystart >> ../data/earthquakes.csv
+	echo "FINISHED DOWNLOAD PARTIAL the data is saved in /data/earthquakes.csv"
 	sleep 1s
 	rm $value$daystart
 	done
 
 done
-echo "FINISHED DOWNLOAD all the data is saved in total.csv"
-
-
-                                                                                                                              
-                                                                                                                                                      
-                                                                                                                                                                                  
-                                                                                                                                                       
-                                                                                                                                                              
-                                                                                                                                                                                           
-                                                                                                                                                            
-                                                                                                                                                                                            
-                                                                                                                                                     
-                                                                                                                                                              
-                                       
+echo "FINISHED DOWNLOAD all the data is saved in /data/earthquakes.csv"
