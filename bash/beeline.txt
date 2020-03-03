@@ -1,0 +1,4 @@
+beeline -u jdbc:hive2://rm01.itversity.com:10000 -n hive -f 1.sql
+
+
+beeline -u jdbc:hive2://localhost:10000 -n hive -f 1.sql
