@@ -13,6 +13,6 @@ create table seismograph_stations
   )
 row format delimited fields terminated by ',';
 
-LOAD DATA INPATH '/user/dkagialis/demo/seismograph-stations.csv'
+LOAD DATA INPATH '/user/dkagialis/demo/seismographic-stations.csv'
 
  OVERWRITE INTO TABLE seismograph_stations;

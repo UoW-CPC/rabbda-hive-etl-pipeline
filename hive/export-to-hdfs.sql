@@ -1,1 +1,1 @@
-export table earthquakes_full_dataset to '/user/dkagialis/demo/output' ;
+export table earthquakes_closest_city_station to '/user/dkagialis/demo/output/';

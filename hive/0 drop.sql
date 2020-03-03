@@ -7,3 +7,7 @@ drop table earthquakes_closest_city_station;
 drop table earthquakes_distance_to_all_cities;
 drop table earthquakes_distance_to_cities;
 drop table earthquakes_full_dataset;
+
+
+
+DROP DATABASE IF EXISTS userdb CASCADE;
