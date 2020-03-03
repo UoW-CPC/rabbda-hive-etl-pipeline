@@ -123,10 +123,45 @@ Move the bash folder to download the earthquakes by executing the command:
  
  ```
 #Command: hdfs dfs -put /"your_local_dir_path/file" /"your_hdfs_dir_path" 
-hdfs dfs -put ../data/earthquakes-final.csv /user/mariadev/earthquakes
-hdfs dfs -put ../data/cities.csv /user/mariadev/earthquakes
-hdfs dfs -put ../data/seismographic-stations.csv /user/mariadev/earthquakes
+hdfs dfs -put ../data/earthquakes-final.csv /demo # put here your path
+hdfs dfs -put ../data/cities.csv /demo # put here your path
+hdfs dfs -put ../data/seismographic-stations.csv /demo # put here your path
  ```
+ 
+ #### 4. ETL pipeline: Executing Hive queries.
+ 
+ This is the most important part of the application, that import the data sets to hive and join them to create new data sets.
+ 
+ Move the hive folder:
+ ```
+ cd hive
+ ``` 
+ and start executing the ETL pipeline:
+ ```
+ # 1. Create the database
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f create-db.sql
+ # 2. Create table cities
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f cities.sql
+ # 3. Create table seasmographic stations
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f seismographic-stations.sql
+ # 4. create table earthquakes_full_dataset
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 1.sql
+ # 4. create table earthquakes with columns: id, time, day, latitude, longitude, magnitude
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 2.sql
+ # create table earthquakes_distance_to_all_cities with cross join
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 3.sql
+ # create table earthquakes_closest_city inner join
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 4.sql
+ # create table earthquakes_closest_city_discance_to_all_stations cross join
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 5.sql
+ # create table earthquakes_closest_city_station inner join
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 6.sql
+ beeline -u jdbc:hive2://"your hive metastore server":10000 -n hive -f 7.sql
+ ```
+ 
+ #### 5. Output data: Downloading the data from HDFS and Post-processing the data with Python.
+ 
+ 
  
  #### Run the Python application
  
