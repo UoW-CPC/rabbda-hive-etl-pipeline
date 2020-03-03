@@ -1,6 +1,5 @@
 use earthquakesbasic;
 
-
 drop table if exists cities;
 
 create table cities
@@ -19,4 +18,4 @@ create table cities
   )
 row format delimited fields terminated by ',';
 
-LOAD DATA INPATH '/user/admin/project/earthquakes-basic/earthquakes-etl/cities.csv' OVERWRITE INTO TABLE cities;
+LOAD DATA INPATH '/user/dkagialis/demo/cities.csv' OVERWRITE INTO TABLE cities;

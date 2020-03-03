@@ -33,4 +33,4 @@ create table earthquakes_full_dataset
   )
 row format delimited fields terminated by ',';
 
-LOAD DATA INPATH '/user/admin/project/earthquakes-basic/earthquakes-etl/earthquakes.csv' OVERWRITE INTO TABLE earthquakes_full_dataset;
+LOAD DATA INPATH '/user/dkagialis/earthquakes.csv' OVERWRITE INTO TABLE earthquakes_full_dataset;
