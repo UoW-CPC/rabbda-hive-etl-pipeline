@@ -5,7 +5,7 @@
 This application comes along with a series of solutions that aim to demonstrate how Big Data can be used to create complex and real-life Big Data applications.
 
 Specifically, with this application, we present a Hive ETL pipeline (Extract-Transform-Load) that joins data 
-from different sources, and allows to answer complex research questions and gain better insights. 
+from different sources, and provides answers complex research questions and gain better insights. 
 
 This is a step-by-step guide that includes all application phases:
  1. Data acquisition: Requesting the data from a Rest API.
