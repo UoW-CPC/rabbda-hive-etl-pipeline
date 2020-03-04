@@ -1,0 +1,13 @@
+
+drop database if exist earthquakesbasic cascade;
+
+
+create database earthquakesbasic;
+
+
+use earthquakesbasic;
+show tables;
+
+
+use earthquakes;
+select * from tablename limit 100;
