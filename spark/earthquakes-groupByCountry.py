@@ -10,8 +10,7 @@ def mapper(line):
     fields = line.split(',')
     return Row(place=str(fields[9].encode("utf-8")))
 
-lines = spark.sparkContext.textFile
-("hdfs:///user/admin/project/earthquakes-basic/earthquakes-etl/results/ETL-process-earthquakes-final.csv")
+lines = spark.sparkContext.textFile("hdfs:///user/dkagialis/demo/data/000000_0")
 earthquakes = lines.map(mapper)
 
 # Infer the schema, and register the DataFrame as a table.

@@ -6,10 +6,10 @@ sc = SparkContext(conf = conf)
 
 def parseLine(line):
 	fields = line.split(',')
-	month = int(fields[1])
-	return month
+	year = int(fields[0])
+	return year
 
-lines = sc.textFile("hdfs:///user/admin/project/earthquakes-basic/earthquakes-spark/earthquakes.csv") 
+lines = sc.textFile("hdfs:///user/dkagialis/demo/earthquakes.csv")
 rdd = lines.map(parseLine) 
 result = rdd.countByValue() 
 
