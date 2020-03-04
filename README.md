@@ -176,10 +176,3 @@ Move the bash folder to download the earthquakes by executing the command:
  ##### Complex research questions with Hive.
  ##### Data presentation with Tableau.
  
- ## Architecture
-<img width="732" alt="architecture" src="https://user-images.githubusercontent.com/32298274/75445139-bebad500-595c-11ea-830f-9850fa0e7dd0.png">
-
-
-
-
-[Demo video](https://drive.google.com/open?id=1cVJDfO616nggClPJWdOQ2HOVEvEpF7tF)
