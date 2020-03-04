@@ -1,0 +1,476 @@
+Last login: Wed Feb  5 11:55:51 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+eroam-118-34:~ dimitriskagialis$ ls
+Applications			Pictures
+Desktop				Public
+Documents			PycharmProjects
+Downloads			VirtualBox VMs
+Google Drive			bigdata
+Google Drive File Stream	eclipse
+Library				eclipse-workspace
+Movies				go
+Music				nltk_data
+eroam-118-34:~ dimitriskagialis$ cd /Users/dimitriskagialis/Google\ Drive/Westminster/Research\ Associate\ 2020/earthquakes\ -\ basic 
+eroam-118-34:earthquakes - basic dimitriskagialis$ ls
+scriptToDownloadEarthquakeBASH
+eroam-118-34:earthquakes - basic dimitriskagialis$ bash scriptToDownloadEarthquakeBASH 
+Test Bash
+year --> 2019
+month --> 01
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 01
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-01-01&endtime=2019-01-15&minmagnitude=0
+--2020-02-05 12:17:14--  http://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-01-01&endtime=2019-01-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-01-01&endtime=2019-01-15&minmagnitude=0 [following]
+--2020-02-05 12:17:14--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-01-01&endtime=2019-01-15&minmagnitude=0
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0101’
+
+0101                    [     <=>            ] 859.75K   616KB/s    in 1.4s    
+
+2020-02-05 12:17:17 (616 KB/s) - ‘0101’ saved [880386]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 01
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 02
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-01-15&endtime=2019-02-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:17:24--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-01-15&endtime=2019-02-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0115’
+
+0115                                                   [      <=>                                                                                                      ]   1019K   699KB/s    in 1.5s    
+
+2020-02-05 12:17:30 (699 KB/s) - ‘0115’ saved [1043900]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 02
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 02
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-02-01&endtime=2019-02-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:17:36--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-02-01&endtime=2019-02-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0201’
+
+0201                                                   [     <=>                                                                                                       ] 820.38K   719KB/s    in 1.1s    
+
+2020-02-05 12:17:42 (719 KB/s) - ‘0201’ saved [840065]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 02
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 03
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-02-15&endtime=2019-03-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:17:48--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-02-15&endtime=2019-03-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0215’
+
+0215                                                   [     <=>                                                                                                       ] 795.90K   666KB/s    in 1.2s    
+
+2020-02-05 12:17:52 (666 KB/s) - ‘0215’ saved [814997]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 03
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 03
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-03-01&endtime=2019-03-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:17:58--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-03-01&endtime=2019-03-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0301’
+
+0301                                                   [     <=>                                                                                                       ] 916.08K   776KB/s    in 1.2s    
+
+2020-02-05 12:18:04 (776 KB/s) - ‘0301’ saved [938065]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 03
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 04
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-03-15&endtime=2019-04-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:18:10--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-03-15&endtime=2019-04-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0315’
+
+0315                                                   [      <=>                                                                                                      ]   1.17M   695KB/s    in 1.7s    
+
+2020-02-05 12:18:15 (695 KB/s) - ‘0315’ saved [1225510]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 04
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 04
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-04-01&endtime=2019-04-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:18:21--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-04-01&endtime=2019-04-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0401’
+
+0401                                                   [     <=>                                                                                                       ] 918.94K   683KB/s    in 1.3s    
+
+2020-02-05 12:18:24 (683 KB/s) - ‘0401’ saved [940991]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 04
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 05
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-04-15&endtime=2019-05-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:18:30--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-04-15&endtime=2019-05-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0415’
+
+0415                                                   [       <=>                                                                                                     ]   1.06M   619KB/s    in 1.8s    
+
+2020-02-05 12:18:40 (619 KB/s) - ‘0415’ saved [1111461]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 05
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 05
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-05-01&endtime=2019-05-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:18:46--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-05-01&endtime=2019-05-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.70, 52.84.90.105, 52.84.90.82, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.70|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0501’
+
+0501                                                   [     <=>                                                                                                       ] 892.02K   697KB/s    in 1.3s    
+
+2020-02-05 12:18:52 (697 KB/s) - ‘0501’ saved [913428]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 05
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 06
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-05-15&endtime=2019-06-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:18:58--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-05-15&endtime=2019-06-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.70, 52.84.90.105, 52.84.90.82, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.70|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0515’
+
+0515                                                   [     <=>                                                                                                       ]   1.05M   804KB/s    in 1.3s    
+
+2020-02-05 12:19:02 (804 KB/s) - ‘0515’ saved [1104113]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 06
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 06
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-06-01&endtime=2019-06-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:19:08--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-06-01&endtime=2019-06-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.70, 52.84.90.105, 52.84.90.82, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.70|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0601’
+
+0601                                                   [      <=>                                                                                                      ]   1.04M   751KB/s    in 1.4s    
+
+2020-02-05 12:19:15 (751 KB/s) - ‘0601’ saved [1091961]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 06
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 07
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-06-15&endtime=2019-07-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:19:21--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-06-15&endtime=2019-07-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.70, 52.84.90.105, 52.84.90.82, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.70|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0615’
+
+0615                                                   [      <=>                                                                                                      ]   1.06M   766KB/s    in 1.4s    
+
+2020-02-05 12:19:28 (766 KB/s) - ‘0615’ saved [1115216]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 07
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 07
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-07-01&endtime=2019-07-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:19:34--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-07-01&endtime=2019-07-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.70, 52.84.90.105, 52.84.90.82, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.70|:443... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2020-02-05 12:19:48 ERROR 400: Bad Request.
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 07
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 08
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-07-15&endtime=2019-08-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:19:54--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-07-15&endtime=2019-08-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 13.32.171.76, 13.32.171.49, 13.32.171.104, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|13.32.171.76|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0715’
+
+0715                                                   [       <=>                                                                                                     ]   2.73M  1.48MB/s    in 1.9s    
+
+2020-02-05 12:20:14 (1.48 MB/s) - ‘0715’ saved [2865418]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 08
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 08
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-08-01&endtime=2019-08-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:20:20--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-08-01&endtime=2019-08-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 13.32.171.76, 13.32.171.49, 13.32.171.104, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|13.32.171.76|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0801’
+
+0801                                                   [      <=>                                                                                                      ]   1.46M   914KB/s    in 1.6s    
+
+2020-02-05 12:20:25 (914 KB/s) - ‘0801’ saved [1529506]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 08
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 09
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-08-15&endtime=2019-09-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:20:31--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-08-15&endtime=2019-09-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 13.32.171.76, 13.32.171.49, 13.32.171.104, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|13.32.171.76|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0815’
+
+0815                                                   [        <=>                                                                                                    ]   1.93M  1.03MB/s    in 1.9s    
+
+2020-02-05 12:20:36 (1.03 MB/s) - ‘0815’ saved [2025347]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 09
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 09
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-09-01&endtime=2019-09-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:20:42--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-09-01&endtime=2019-09-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 13.32.171.76, 13.32.171.49, 13.32.171.104, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|13.32.171.76|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0901’
+
+0901                                                   [      <=>                                                                                                      ]   1.45M  1.01MB/s    in 1.4s    
+
+2020-02-05 12:20:51 (1.01 MB/s) - ‘0901’ saved [1518188]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 09
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 10
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-09-15&endtime=2019-10-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:20:57--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-09-15&endtime=2019-10-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 13.32.171.76, 13.32.171.49, 13.32.171.104, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|13.32.171.76|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘0915’
+
+0915                                                   [      <=>                                                                                                      ]   1.33M   914KB/s    in 1.5s    
+
+2020-02-05 12:21:01 (914 KB/s) - ‘0915’ saved [1397253]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 10
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 10
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-10-01&endtime=2019-10-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:21:07--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-10-01&endtime=2019-10-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 13.32.171.76, 13.32.171.49, 13.32.171.104, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|13.32.171.76|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘1001’
+
+1001                                                   [      <=>                                                                                                      ]   1.15M   749KB/s    in 1.6s    
+
+2020-02-05 12:21:11 (749 KB/s) - ‘1001’ saved [1201943]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 10
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 11
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-10-15&endtime=2019-11-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:21:17--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-10-15&endtime=2019-11-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘1015’
+
+1015                                                   [      <=>                                                                                                      ]   1.34M   925KB/s    in 1.5s    
+
+2020-02-05 12:21:21 (925 KB/s) - ‘1015’ saved [1410542]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 11
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 11
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-11-01&endtime=2019-11-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:21:27--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-11-01&endtime=2019-11-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘1101’
+
+1101                                                   [     <=>                                                                                                       ]   1.06M   805KB/s    in 1.3s    
+
+2020-02-05 12:21:30 (805 KB/s) - ‘1101’ saved [1107724]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 11
+dayStart -> 15
+dayEnd -> 01
+nextMonth -> 12
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-11-15&endtime=2019-12-01&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:21:36--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-11-15&endtime=2019-12-01&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘1115’
+
+1115                                                   [     <=>                                                                                                       ]   1.10M   854KB/s    in 1.3s    
+
+2020-02-05 12:21:44 (854 KB/s) - ‘1115’ saved [1150093]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 12
+dayStart -> 01
+dayEnd -> 15
+nextMonth -> 12
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-12-01&endtime=2019-12-15&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:21:51--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-12-01&endtime=2019-12-15&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘1201’
+
+1201                                                   [      <=>                                                                                                      ] 894.14K   627KB/s    in 1.4s    
+
+2020-02-05 12:21:58 (627 KB/s) - ‘1201’ saved [915596]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+year --> 2019
+month --> 12
+dayStart -> 15
+dayEnd -> 31
+nextMonth -> 12
+https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-12-15&endtime=2019-12-31&minmagnitude=0
+URL transformed to HTTPS due to an HSTS policy
+--2020-02-05 12:22:04--  https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2019-12-15&endtime=2019-12-31&minmagnitude=0
+Resolving earthquake.usgs.gov (earthquake.usgs.gov)... 52.84.90.105, 52.84.90.108, 52.84.90.70, ...
+Connecting to earthquake.usgs.gov (earthquake.usgs.gov)|52.84.90.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘1215’
+
+1215                                                   [      <=>                                                                                                      ]   1.11M   710KB/s    in 1.6s    
+
+2020-02-05 12:22:13 (710 KB/s) - ‘1215’ saved [1161927]
+
+FINISHED DOWNLOAD PARTIAL the data is saved in total.csv
+FINISHED DOWNLOAD all the data is saved in total.csv
+eroam-118-34:earthquakes - basic dimitriskagialis$ 
