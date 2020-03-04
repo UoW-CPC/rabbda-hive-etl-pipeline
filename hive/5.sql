@@ -36,4 +36,4 @@ SELECT e.id as id, e.time as time, e.day as day, e.latitude as latitude, e.longi
      s.latitude as station_latitude, s.longitude as station_longitude, s.datacenter as station_datacenter,
      60*1.1515*(180*(acos(((sin(radians(e.latitude))*sin(radians(s.latitude)))+(cos(radians(e.latitude))*cos(radians(s.latitude))*cos(radians(e.longitude - s.longitude))))))/PI()) as station_distance
 FROM earthquakes_closest_city e
-CROSS JOIN seismograph_stations s;
+CROSS JOIN seismographic_stations s;

@@ -123,9 +123,6 @@ Move the bash folder to download the earthquakes by executing the command:
  
  ```
 #Command: hdfs dfs -put /"your_local_dir_path/file" /"your_hdfs_dir_path" 
-hdfs dfs -put ../data/earthquakes-final.csv /user/dkagialis/demo  # put here your path
-hdfs dfs -put ../data/cities.csv /user/dkagialis/demo # put here your path
-hdfs dfs -put ../data/seismographic-stations.csv /user/dkagialis/demo # put here your path
  ```
  
  #### 4. ETL pipeline: Executing Hive queries.
